@@ -9,17 +9,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Message 
 {
-	private String sender;
 	private String content;
-	
+	private String sender;
 	private LocalDateTime time;
-
+	private boolean typing;
 	
-	public Message(String sender, String content) {
+	public Message(String content, String sender) {
 		super();
-		this.sender = sender;
 		this.content = content;
-		
+		this.sender = sender;
 		this.time = LocalDateTime.now();
 	}
 	

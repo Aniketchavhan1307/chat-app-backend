@@ -33,7 +33,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer
 		// this is for connection establishment 
 		
 		registry.addEndpoint("/chat")
-				.setAllowedOrigins("http://localhost:3000")
+				.setAllowedOrigins(AppContants.FRONT_END_BASE_URL)
 				.withSockJS();
 		
 	}

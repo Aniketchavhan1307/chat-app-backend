@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,8 @@ import com.chat.app.entities.Room;
 import com.chat.app.service.RoomService;
 
 @RestController
-@RequestMapping("api/v1/rooms")
+@RequestMapping("/api/v1/rooms")
+@CrossOrigin("*")
 public class RoomController 
 {
 	@Autowired
@@ -45,7 +47,7 @@ public class RoomController
 		
 		Room savedRoom = roomService.saveRoom(room);
 		
-		return ResponseEntity.status(HttpStatus.CREATED).body(room);
+		return ResponseEntity.status(HttpStatus.CREATED).body(savedRoom);
 	}
 	
 	
