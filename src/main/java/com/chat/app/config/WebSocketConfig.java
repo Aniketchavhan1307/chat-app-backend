@@ -9,7 +9,7 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 
 @Configuration
 @EnableWebSocketMessageBroker
-@CrossOrigin("*")          //  @CrossOrigin("http://localhost:3000")
+@CrossOrigin("*")          //  @CrossOrigin("http://localhost:5173")
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer
 {
 
